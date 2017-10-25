@@ -13,7 +13,7 @@ var VideoListView = Backbone.View.extend({
     // this.on('sync', function() {
     //   console.log('worked');
     // });
-    this.listenTo(Video, 'sync', this.fetch);
+    this.listenTo(this.collection, 'sync', this.render);
   },
 
   render: function() {
