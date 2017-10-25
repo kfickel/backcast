@@ -8,11 +8,7 @@ var VideoPlayerView = Backbone.View.extend({
   },
 
   render: function() {
-    if (this.model) {
-      this.$el.html(this.template());
-    } else {
-      this.$el.html('<div class="loading">Pkease wait...</div>');
-    }
+    this.$el.html(this.template(this.model.attributes));
     return this;
   },
 
